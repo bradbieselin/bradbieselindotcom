@@ -1,0 +1,440 @@
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+    --black: #171321;
+    --dkblue: #C9DFF2;
+    --ltblue: #80A4C4;
+    --brown: #F2E5D5;
+    --teal: #819FA6;
+    --aqua: #C9EBF2;
+    --white: #f7f8fa;
+    --dkmag: #8B008B;
+    --blurple: #1e272f;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: Oxygen, sans-serif;
+
+}
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+/* generic styles for the page */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--sans);
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--font-size);
+}
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+a {
+    color: var(--ltblue);
+}
+
+a:hover {
+    color: var(--teal);
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--black);
+}
+
+/*background color divs */
+
+.section-dkblue {
+    background-color: var(--dkblue);
+}
+
+.gradient {
+    background: linear-gradient(90deg, hsla(319, 82%, 52%, 1) 33%, hsla(216, 90%, 48%, 1) 68%);
+    height: 2px;
+}
+
+.section-blurple {
+    background-color: var(--blurple);
+}
+
+.section-black {
+    background-color: var(--black);
+}
+
+/* intro styles */
+#intro {
+    padding: 4rem 1rem 10rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#intro p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#intro .name {
+    font-family: var(--mono);
+    font-size: 1rem;
+}
+
+.name span {
+    font-family: var(--sans);
+    font-size: 4rem;
+    color: var(--aqua);
+    display: block;
+    font-weight: 300;
+}
+
+#intro h2 {
+    font-size: 4rem;
+}
+
+/* contact section */
+
+#contact {
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+#contact p:last-child {
+    margin-top: 3rem;
+}
+
+/* nav section */
+nav {
+  font-family: var(--mono);
+  font-size: 80%;
+  padding: 1rem;
+    background-color: var(--black); 
+      position: absolute;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      transform: translateY(-100%);
+      transition: transform 0.2s ease;
+}
+
+@media (min-width: 550px) {
+  nav {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: auto;
+    display: block;
+    transform: translateY(0);
+  }
+  .hamburger,
+  .close {
+    display: none;
+  }
+  ul {
+    margin: auto;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  li:first-child {
+    flex-basis: 100%;
+  }
+  li:first-child a {
+    text-align: center;
+  }
+}
+@media (min-width: 850px) {
+    nav li:first-child {
+    flex-basis: auto;
+    margin-right: auto;
+  }
+}
+
+nav:target {
+  transform: translateY(0);
+}
+
+.hamburger, .close {
+    font-size: 2rem;
+    color: var(--black);
+    padding: 1rem;
+  }
+
+nav h1 a {
+  font-family: var(--sans);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav li:first-child {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+nav [class*="fa-"] {
+  font-size: 150%;
+  color: var(--white);
+}
+
+nav [class*="fa-"]:hover {
+  font-size: 150%;
+  color: var(--teal);
+}
+
+nav h1 [class*="fa-"] {
+  font-size: 100%;
+  color: var(--teal);
+}
+
+nav h1 [class*="fa-"]:hover {
+  font-size: 100%;
+  color: var(--teal);
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+}
+
+nav a:hover,
+nav [class*="fa-"]:hover {
+  color: var(--teal)
+}
+
+.button {
+   background-color: var(--black);
+   color: white;
+   padding: 0.5rem;
+    border-radius: 5px;
+    font-family: var(--mono);
+    text-decoration: none;
+}
+
+
+
+/* footer */
+footer {
+  text-align: center;
+  padding: 4rem 0;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 2rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 3rem;
+  font-size: 3rem;
+}
+
+/* Projects section */
+#projects {
+        padding: 4rem 1rem 10rem 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: calc(2.5rem * 1.5);
+}
+
+#projects h3 {
+    color: var(--aqua);
+}
+
+#projects h4 {
+    font-size: 1rem;
+    font-family: var(--mono);
+    margin: 0;
+}
+
+.blackbox {
+    background-color: var(--black);
+    padding: 1rem;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#projects ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+#projects img {
+    margin: 2rem 0 4rem 0;
+    border-left: 1px solid var(--aqua);
+    border-top: 1px solid var(--aqua);
+    border-radius: 25px;
+    padding: 1rem;
+}
+
+@media(min-width: 550px) {
+    article {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 1rem;
+    }
+    .text {
+        order: 2;
+        text-align: right;
+        grid-column: 5/11;
+        grid-row: 1/2;
+    }
+    #projects ul {
+        justify-content: flex-end;
+    }
+    #projects img {
+        grid-column: 1/6;
+        grid-row: 1/2;
+    }
+
+    #projects img:hover {
+      cursor: pointer;
+  }
+
+    #projects .reverse .text {
+        order: 2;
+        text-align: left;
+        grid-column: 1/7;
+    }
+    #projects .reverse ul {
+        justify-content: flex-start;
+    }
+    #projects .reverse img {
+        grid-column: 6/11;
+        grid-row: 1/2;
+    }
+}
+
+@media (min-width: 850px) {
+  nav {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 849px) {
+    nav {
+        font-size: 70%;
+        padding: 0.2rem;
+    }
+}
+
+/* About Section */
+
+#about {
+    padding: 4rem 1rem 10rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#about h2 {
+font-size: 2.5rem;
+margin-bottom: calc(2.5rem * 1.5);
+}
+
+#about h3 {
+color: var(--aqua);
+}
+
+#about h4 {
+font-size: 1rem;
+font-family: var(--mono);
+margin: 0;
+}
+
+.bluebox {
+background-color: var(--blurple);
+padding: 1rem;
+border-radius: 10px;
+color: white;
+font-size: 1rem;
+line-height: 1.5;
+}
+
+#about ul {
+list-style-type: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-flow: row wrap;
+justify-content: flex-start;
+gap: 1rem;
+font-size: 1rem;
+}
+
+#about img {
+margin: 2rem 0 4rem 0;
+border-left: 1px solid var(--aqua);
+border-top: 1px solid var(--aqua);
+border-radius: 25px;
+padding: 1rem;
+height: auto;
+max-width: 99%;
+overflow: hidden;
+}
+
+@media(min-width: 550px) {
+article {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1rem;
+}
+.text {
+    order: 2;
+    text-align: right;
+    grid-column: 5/11;
+    grid-row: 1/2;
+}
+#about ul {
+    justify-content: flex-end;
+}
+#about img {
+    grid-column: 1/6;
+    grid-row: 1/2;
+}
+}

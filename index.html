@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brad Bieselin's Portfolio</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Oxygen+Mono&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">  
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+<header>
+    <!-- hamburger icon -->
+<a class="hamburger" href="#navbar" aria-label="Open main menu">
+  <span class="sr-only">Open main menu</span>
+  <span class="fas fa-bars" aria-hidden="true"></span>
+</a>
+    <nav id="navbar">
+        <ul>
+          <li>
+            <h1>
+              <a href="#intro">
+                <span class="fab fa-react" aria-hidden="true"></span>
+                <span> Brad Bieselin </span>
+                </a>
+              </h1>
+            </li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="https://www.linkedin.com/in/bradbieselin/" target="_blank"> 
+              <i class="fab fa-linkedin" aria-hidden = "true"></i>
+              <span class="sr-only"> LinkedIn</span></a></li>
+          <li><a href="https://www.github.com/bradbieselin" target="_blank"><i class="fab fa-github-square"></i>
+            <span class="sr-only"> Github</a></li>
+          <li>
+              <a href="https://www.dropbox.com/s/6wyfb0sgwkwcrwv/BBieselin_Resume.pdf?dl=0" class="button" target="_blank">Resume</a></li>
+        </ul>
+    <!-- close icon -->
+    <a class="close" href="#" aria-label="Close main menu">
+    <span class="sr-only">Close main menu</span>
+    <span class="fas fa-times" aria-hidden="true"></span>
+  </a>
+    </nav>
+</header>
+
+    <section id="intro">
+        <p class="name">Hi, my name is <span>Brad Bieselin.</span> <p>
+      
+        <h2>I am a freelance web developer.</h2>
+      
+        <p>I am focused on frontend development using React.js.</p>
+      
+      I hope to become a full-time developer while continuing to build my own projects.
+      </section>
+
+      <div class="gradient"></div>
+
+    <div class="section-blurple">
+      <section id="projects">
+        <h2>Projects</h2>
+        <article>
+            <div class="text">
+          <h4>Latest Project</h4>
+          <h3>Bitcoin Tracker</h3>
+          <p class="blackbox">This project is a Bitcoin Price Tracker that updates the price of Bitcoin in USD live from <a href="https://www.binance.com/en/trade/BTC_USDT" target="_blank">Binance</a>. You can visit the Bitcoin Tracker site by clicking <a href="https://bitcointracker.bradbieselin.com/" target="_blank">here</a> and you can see the source code by visiting the <a href="https://github.com/bradbieselin/bitcoin-tracker" target="_blank">GitHub Repository</a>.</p>
+          <h4>Technologies used include:</h4>
+          <ul>
+            <li>Javascript</li>
+            <li>CSS</li>
+            <li>HTML</li>
+          </ul>
+        </div>
+          <img src="img/bitcoin-tracker.png" alt="Screenshot of Bitcoin Tracker Website by Brad" onclick="newTab('https://bitcointracker.bradbieselin.com/')" />
+        </article>
+
+        <article class="reverse">
+            <div class="text">
+          <h4>Latest Project</h4>
+          <h3>Wall of Wonder</h3>
+          <p class="blackbox">Description of the project. This should be fairly concise while also describing the key components that you developed or worked on. It can be as long as you need it to be but should at least be a few sentences long. Be sure to include specific links anywhere in the description. A link looks like <a href="https://frontendmasters.github.io/grid-flexbox-v2/">this</a>, and multiple links look <a href="#">like this</a> and <a href="#">like this</a>.</p>
+          <h4>Technologies used include:</h4>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>SVG</li>
+          </ul>
+        </div>
+          <img src="https://assets.codepen.io/296057/fem-gettingstartedcss-ch5-1.png" alt="Screenshot of the Wall of Wonder." />
+        </article>
+
+      </section>
+    </div>
+    <div class="gradient"></div>
+
+    <div class="section-blurple"></div>
+    <section id="about">
+        <h2>About Brad Bieselin</h2>
+        <article>
+            <div class="text">
+          <h4>Latest Project</h4>
+          <h3>Wall of Wonder</h3>
+          <p class="bluebox">Description of the project. This should be fairly concise while also describing the key components that you developed or worked on. It can be as long as you need it to be but should at least be a few sentences long. Be sure to include specific links anywhere in the description. A link looks like <a href="https://frontendmasters.github.io/grid-flexbox-v2/">this</a>, and multiple links look <a href="#">like this</a> and <a href="#">like this</a>.</p>
+          <h4>Technologies used include:</h4>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>SVG</li>
+          </ul>
+        </div>
+          <img src="img/Headshot.jpg" alt="Screenshot of the Wall of Wonder." />
+        </article>
+      </section>
+    </div>
+
+
+<div class="gradient"></div>
+<div class="section-blurple">
+    <section id="contact">
+        <h2>Contact me</h2>
+        
+        <p>I'm always interested in hearing about new opportunities and projects.</p>
+        
+        <p><a href="mailto:bradley.bieselin@gmail.com" class="button">Email me</a></p>
+        
+    </section>
+    <div class="gradient"></div>
+</div>
+
+    <div class="section-black">
+    <footer>
+        <h2>Brad Bieselin &middot; Freelance Web Developer</h2>
+        <ul>
+            <li>
+                <a href="https://www.linkedin.com/in/bradbieselin/" target="_blank"> 
+                <span class="fab fa-linkedin" aria-hidden = "true"></span>
+                <span class="sr-only"> LinkedIn</span></a>
+            </li>
+            <li>
+                <a href="https://www.github.com/bradbieselin" target="_blank">
+                <span class="fab fa-github-square"></span>
+                <span class="sr-only"> Github</a>
+            </li>
+            <li>
+                <a href="mailto:bradley.bieselin@gmail.com">
+                <span class="fas fa-envelope" aria-hidden="true"></span>
+                <span class="sr-only">Email</span></a>
+            </li>
+        </ul>
+
+        <p><small> &copy; 2021 Brad Bieselin. All rights reserved.</small></p>
+    </footer>
+</div>
+
+
+    
+</body>
+</html>
