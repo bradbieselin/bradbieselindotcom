@@ -70,6 +70,7 @@ header {
 
 .section-blurple {
     background-color: var(--blurple);
+    
 }
 
 .section-black {
@@ -150,9 +151,6 @@ nav {
     flex-flow: row wrap;
     justify-content: center;
   }
-  li:first-child {
-    flex-basis: 100%;
-  }
   li:first-child a {
     text-align: center;
   }
@@ -227,7 +225,7 @@ nav [class*="fa-"]:hover {
 .button {
    background-color: var(--black);
    color: white;
-   padding: 0.5rem;
+   padding: 0.5rem 1rem;
     border-radius: 5px;
     font-family: var(--mono);
     text-decoration: none;
@@ -288,7 +286,7 @@ footer ul {
     padding: 0;
     margin: 0;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: nowrap;
     justify-content: flex-start;
     gap: 1rem;
     font-size: 1rem;
